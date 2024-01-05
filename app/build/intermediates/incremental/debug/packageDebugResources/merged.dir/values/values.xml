@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="white">#FFFFFFFF</color>
+    <string name="app_name">RssiValidation</string>
+    <string name="cancel">Cancel</string>
+    <string name="channel_device">Device State</string>
+    <string name="channel_device_battery">Battery %1$d</string>
+    <string name="channel_device_connected">%1$s is connected</string>
+    <string name="channel_device_description">Auto connects to BluArmor and keeps the device connected with app services</string>
+    <string name="channel_device_disconnected">BluArmor is disconnected</string>
+    <string name="channel_device_exit_desc_connected">%1$s is still connected. If you exit now some functions will not work, unless you re-open the app</string>
+    <string name="channel_device_exit_desc_disconnected">BluArmor device will not auto connect, unless you re-open the BluArmor app</string>
+    <string name="channel_device_id">DEVICE_STATE</string>
+    <string name="channel_device_notification_exit_title">Are you sure you want to exit?</string>
+    <string name="channel_device_title">Device State</string>
+    <string name="exit">Exit</string>
+    <string name="have_safe_ride">Have a safe ride</string>
+    <string name="ok">OK</string>
+    <style name="Theme.RssiValidation" parent="android:Theme.Material.Light.NoActionBar"/>
+</resources>

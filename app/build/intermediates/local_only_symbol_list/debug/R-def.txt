@@ -1,0 +1,32 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color purple_200
+color purple_500
+color purple_700
+color teal_200
+color teal_700
+color white
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+drawable ic_ok
+mipmap ic_launcher
+mipmap ic_launcher_round
+string app_name
+string cancel
+string channel_device
+string channel_device_battery
+string channel_device_connected
+string channel_device_description
+string channel_device_disconnected
+string channel_device_exit_desc_connected
+string channel_device_exit_desc_disconnected
+string channel_device_id
+string channel_device_notification_exit_title
+string channel_device_title
+string exit
+string have_safe_ride
+string ok
+style Theme.RssiValidation
+xml backup_rules
+xml data_extraction_rules
