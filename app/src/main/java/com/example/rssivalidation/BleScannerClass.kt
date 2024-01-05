@@ -16,19 +16,22 @@ class BleScannerClass(
     private val scanResults: MutableList<ScanResult> = mutableListOf()
     private var leScanCallback: ScanCallback? = null
     var rssiRidegrid: Int = -1000
-    val ridegridMacAddress = viewModel.ridegridMacAddress
+    val ridegridMacAddress = viewModel._ridegridMacAddress.toString()
 
     fun startBleScanner(scanFilters: List<ScanFilter>, scanSettings: ScanSettings) {
         leScanCallback = object : ScanCallback() {
             override fun onScanResult(callbackType: Int, result: ScanResult) {
                 super.onScanResult(callbackType, result)
-//                scanResults.add(result)
-                if (ridegridMacAddress != null){
-                    handleScanResult(result)
+                scanResults.add(result)
+                if (result.device.address == ridegridMacAddress) {
+                    Log.d("Ride MAc", "${ridegridMacAddress}")
+                    Log.d("Device address", "${result.device.address}")
+                    rssiRidegrid = result.rssi
+                    viewModel.updateRidegridRssi(rssiRidegrid)
                 }
-                Log.d("MACaddress: ", "${result.device.address}")
-                Log.d("RSSI", "${result.rssi}")
-
+//                handleScanResult(result)
+//                Log.d("MACaddress: ", "${result.device.address}")
+//                Log.d("RSSI", "${result.rssi}")
                 viewModel.updateScanResults(scanResults.toList())
             }
         }
@@ -41,11 +44,15 @@ class BleScannerClass(
 
     @SuppressLint("SuspiciousIndentation")
     private fun handleScanResult(result: ScanResult) {
-//        if (ridegridMacAddress != null) {
-                rssiRidegrid = result.rssi
-                Log.d("Scanner_RideGrid RSSI", "${rssiRidegrid}")
-                viewModel.updateRidegridRssi(rssiRidegrid)
-                Log.d("Updateed_RSSI", "${viewModel.updateRidegridRssi(rssiRidegrid)}")
-//            }
+
+       if (result.device.address == ridegridMacAddress) {
+           Log.d("Ride MAc", "${ridegridMacAddress}")
+           Log.d("Device address", "${result.device.address}")
+          rssiRidegrid = result.rssi
+
+           viewModel.updateRidegridRssi(rssiRidegrid)
+       }
         }
     }
+//
+//                Log.d("Updateed_RSSI", "${viewModel.updateRidegridRssi(rssiRidegrid)}")

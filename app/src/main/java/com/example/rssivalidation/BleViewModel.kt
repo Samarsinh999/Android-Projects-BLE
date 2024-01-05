@@ -17,12 +17,14 @@ import kotlinx.coroutines.launch
 
 @SuppressLint("StaticFieldLeak")
 class BleViewModel : ViewModel() {
-//    private val _ridegridMacAddress = MutableLiveData<String>()
-        private val _ridegridMacAddress = MutableLiveData<String>()
+    private lateinit var serivcesBle: SerivcesBle
+    val _ridegridMacAddress = MutableLiveData<String>()
+
 
     private val _testScenarioResult = Channel<TestScenarioResult>()
-    private val _ridegridRssi = MutableStateFlow(-1000)
-    val ridegridRssi: MutableStateFlow<Int> get() = _ridegridRssi
+    val _ridegridRssi = MutableStateFlow(-1000)
+    val ridegridRssi: MutableStateFlow<Int>
+        get() = _ridegridRssi
 
     private val _scanResults = mutableStateOf(emptyList<ScanResult>())
     val scanResults: State<List<ScanResult>> = _scanResults
@@ -36,7 +38,6 @@ class BleViewModel : ViewModel() {
     val ridegridMacAddress: LiveData<String>
             get() = _ridegridMacAddress
 
-
     fun setRidegridMacAddress(macAddress: String) {
         _ridegridMacAddress.value = macAddress
         Log.d("Getting Mac from Main","${macAddress}")
@@ -45,20 +46,19 @@ class BleViewModel : ViewModel() {
     fun updateRidegridRssi(rssi: Int) {
         viewModelScope.launch {
             _ridegridRssi.asMutableStateFlow()?.tryEmit(rssi)
-//            Log.d("ViewModel_RSSI", "${rssi}")
             delay(1000)
-            checkTestScenario(rssi)
+//            checkTestScenario(rssi)
         }
     }
 
-    private suspend fun checkTestScenario(rssi: Int) {
-        val range = 0..5
-        if (range.contains(rssi)) {
-            _testScenarioResult.send(TestScenarioResult.PASSED)
-        } else {
-            _testScenarioResult.send(TestScenarioResult.FAILED)
-        }
-    }
+//    private suspend fun checkTestScenario(rssi: Int) {
+//        val range = 0..5
+//        if (range.contains(rssi)) {
+//            _testScenarioResult.send(TestScenarioResult.PASSED)
+//        } else {
+//            _testScenarioResult.send(TestScenarioResult.FAILED)
+//        }
+//    }
 }
 
 sealed class TestScenarioResult {

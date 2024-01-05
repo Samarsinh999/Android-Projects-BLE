@@ -146,8 +146,8 @@ class MainActivity : ComponentActivity(), ServiceConnection {
 
         val bluetoothAdapter = BluetoothAdapter.getDefaultAdapter()
         bleScanner = BleScannerClass(viewModel, bluetoothAdapter)
+
         bluService.value?.device?.rideGrid?.turnOn()
-//        Log.d("MACMACMAC", "${bluService.value?.RIDEGRID_MAC_ADDRESS}")
         bleScanner.startBleScanner(scanFilters, scanSettings)
     }
 

@@ -118,8 +118,8 @@ fun BleScreen(viewModel: BleViewModel,mainActivity: MainActivity) {
 @Composable
 fun DeviceImpl(viewModel: BleViewModel) {
     var macAddress by remember { mutableStateOf("") }
-//    var rssi by remember { mutableStateOf("") }
-    val ridegridRssi by viewModel.ridegridRssi.collectAsState()
+    var rssi by remember { mutableStateOf("") }
+    val ridegridRssi by viewModel._ridegridRssi.collectAsState()
 
 //    val rssi by rememberUpdatedState(newValue = viewModel.ridegridRssi.collectAsState().value)
 //    val rssiValue by viewModel.ridegridRssi.collectAsState()
