@@ -32,13 +32,12 @@ import androidx.lifecycle.Observer
 
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
-fun BleScreen(viewModel: BleViewModel,mainActivity: MainActivity) {
+fun BleScreen(viewModel: BleViewModel, mainActivity: MainActivity) {
     Column(
         modifier = Modifier
             .fillMaxSize()
             .padding(16.dp)
     ) {
-
         // paired Device
         LazyColumn(
             modifier = Modifier
@@ -118,29 +117,14 @@ fun BleScreen(viewModel: BleViewModel,mainActivity: MainActivity) {
 @Composable
 fun DeviceImpl(viewModel: BleViewModel) {
     var macAddress by remember { mutableStateOf("") }
-    var rssi by remember { mutableStateOf("") }
-    val ridegridRssi by viewModel._ridegridRssi.collectAsState()
-
-//    val rssi by rememberUpdatedState(newValue = viewModel.ridegridRssi.collectAsState().value)
-//    val rssiValue by viewModel.ridegridRssi.collectAsState()
-
-
-//    LaunchedEffect(Unit) {
-//        while (true) {
-//            val latestRssi = viewModel.ridegridRssi.value
-//            if (macAddress == viewModel.ridegridMacAddress.value) {
-//                ridegridRssi = latestRssi.toString()
-//            }
-//            delay(400)
-//        }
-//    }
-
+    val ridegridRssi by viewModel.ridegridRssi.collectAsState()
     val observer = Observer<String> { newMacAddress ->
         macAddress = newMacAddress
         Log.d("node Mac", "${newMacAddress}")
     }
 
     viewModel.ridegridMacAddress.observeForever(observer)
+
 
     Column(
         modifier = Modifier
@@ -216,7 +200,6 @@ fun ScanResultItem(result: ScanResult) {
                 )
                 Text(text = result.device.address)
             }
-
             Column(
                 modifier = Modifier
                     .weight(1f)

@@ -9,21 +9,16 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.aptener.bluconnect.common.ext.asMutableStateFlow
-import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
 
 @SuppressLint("StaticFieldLeak")
 class BleViewModel : ViewModel() {
-    private lateinit var serivcesBle: SerivcesBle
-    val _ridegridMacAddress = MutableLiveData<String>()
-
-
-    private val _testScenarioResult = Channel<TestScenarioResult>()
-    val _ridegridRssi = MutableStateFlow(-1000)
-    val ridegridRssi: MutableStateFlow<Int>
+    var _ridegridMacAddress = MutableLiveData<String>()
+    var _ridegridRssi = MutableStateFlow(-11)
+    val ridegridRssi: StateFlow<Int>
         get() = _ridegridRssi
 
     private val _scanResults = mutableStateOf(emptyList<ScanResult>())
@@ -45,20 +40,12 @@ class BleViewModel : ViewModel() {
 
     fun updateRidegridRssi(rssi: Int) {
         viewModelScope.launch {
-            _ridegridRssi.asMutableStateFlow()?.tryEmit(rssi)
+            _ridegridRssi.tryEmit(rssi)
+            Log.d("Viewmodel RSSI", "${rssi}")
             delay(1000)
 //            checkTestScenario(rssi)
         }
     }
-
-//    private suspend fun checkTestScenario(rssi: Int) {
-//        val range = 0..5
-//        if (range.contains(rssi)) {
-//            _testScenarioResult.send(TestScenarioResult.PASSED)
-//        } else {
-//            _testScenarioResult.send(TestScenarioResult.FAILED)
-//        }
-//    }
 }
 
 sealed class TestScenarioResult {
