@@ -122,9 +122,7 @@ fun DeviceImpl(viewModel: BleViewModel) {
         macAddress = newMacAddress
         Log.d("node Mac", "${newMacAddress}")
     }
-
-    viewModel.ridegridMacAddress.observeForever(observer)
-
+    viewModel._ridegridMacAddress.observeForever(observer)
 
     Column(
         modifier = Modifier

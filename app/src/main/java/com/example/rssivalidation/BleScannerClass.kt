@@ -23,7 +23,8 @@ class BleScannerClass(
         leScanCallback = object : ScanCallback() {
             override fun onScanResult(callbackType: Int, result: ScanResult) {
                 super.onScanResult(callbackType, result)
-                if (result.device.address == "EF:AE:89:F9:B8:83") {
+//                if (result.device.address == "EF:AE:89:F9:B8:83") {
+                if (result.device.address == viewModel._ridegridMacAddress.value) {
                     Log.d("transcipt", "${result.scanRecord?.deviceName.toString()}")
                     Log.d("Ride MAc", "${ridegriMac}")
                     Log.d("Device address", "${result.device.address}")
