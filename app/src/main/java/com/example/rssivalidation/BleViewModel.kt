@@ -16,9 +16,13 @@ import kotlinx.coroutines.launch
 @SuppressLint("StaticFieldLeak")
 class BleViewModel : ViewModel() {
     var _ridegridMacAddress = MutableLiveData<String>()
-    var _ridegridRssi = MutableStateFlow(-11)
+    var _ridegridRssi = MutableStateFlow(-0)
+    var _Rssi = MutableStateFlow(-121)
     val ridegridRssi: StateFlow<Int>
         get() = _ridegridRssi
+
+    val resultdRssi: StateFlow<Int>
+        get() = _Rssi
 
     private val _scanResults = mutableStateOf(emptyList<ScanResult>())
     val scanResults: State<List<ScanResult>> = _scanResults
@@ -29,8 +33,6 @@ class BleViewModel : ViewModel() {
         _scanResults.value = uniqueResultDevices
     }
 
-//    val ridegridMacAddress: LiveData<String> = _ridegridMacAddress
-
     fun setRidegridMacAddress(macAddress: String) {
         _ridegridMacAddress.value = macAddress
         Log.d("Getting Mac from Main","${macAddress}")
@@ -39,12 +41,19 @@ class BleViewModel : ViewModel() {
     fun updateRidegridRssi(rssi: Int) {
         viewModelScope.launch {
             _ridegridRssi.tryEmit(rssi)
-            Log.d("Viewmodel RSSI", "${rssi}")
+//            Log.d("Viewmodel RSSI", "${rssi}")
             delay(1000)
 //            checkTestScenario(rssi)
         }
     }
 
+    fun updateBleRssi(pwd: Int) {
+        viewModelScope.launch {
+            _Rssi.tryEmit(pwd)
+//            Log.d("Viewmodel RSSI", "${pwd}")
+            delay(1000)
+        }
+    }
 }
 
 sealed class TestScenarioResult {

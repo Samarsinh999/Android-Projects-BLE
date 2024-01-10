@@ -2,7 +2,6 @@ package com.example.rssivalidation
 
 import android.annotation.SuppressLint
 import android.bluetooth.le.ScanResult
-import android.util.Log
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -77,7 +76,7 @@ fun BleScreen(viewModel: BleViewModel, mainActivity: MainActivity) {
                 )
             }
             items(scanResults) { result ->
-                ScanResultItem(result)
+                ScanResultItem(result, viewModel)
             }
         }
         // Buttons fixed at the bottom
@@ -120,7 +119,7 @@ fun DeviceImpl(viewModel: BleViewModel) {
     val ridegridRssi by viewModel.ridegridRssi.collectAsState()
     val observer = Observer<String> { newMacAddress ->
         macAddress = newMacAddress
-        Log.d("node Mac", "${newMacAddress}")
+//        Log.d("node Mac", "${newMacAddress}")
     }
     viewModel._ridegridMacAddress.observeForever(observer)
 
@@ -171,9 +170,16 @@ fun DeviceImpl(viewModel: BleViewModel) {
     }
 }
 
-@SuppressLint("MissingPermission")
+@SuppressLint("MissingPermission", "UnrememberedMutableState")
 @Composable
-fun ScanResultItem(result: ScanResult) {
+fun ScanResultItem(result: ScanResult,viewModel: BleViewModel) {
+//    var macAddress =  mutableStateOf(viewModel.resultdRssi.collectAsState())
+    val rRssi by viewModel.resultdRssi.collectAsState()
+//    var rRssi by rememberSaveable(Unit) {
+//        mutableStateOf(listOf(viewModel.resultdRssi.value))
+//    }
+//    rRssi = rRssi.toMutableList()
+//    Log.d("Display Rssi", "${rRssi}")
     Column(
         modifier = Modifier
             .fillMaxWidth()
@@ -213,7 +219,7 @@ fun ScanResultItem(result: ScanResult) {
                         color = Color.Gray
                     )
                     Text(
-                        text = result.rssi.toString(),
+                        text = rRssi.toString(),
                         color = Color.Gray
                     )
                 }
