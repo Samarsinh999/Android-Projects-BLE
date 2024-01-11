@@ -6,14 +6,13 @@ import java.lang.System;
 public final class BleScreenKt {
     
     @androidx.compose.runtime.Composable
-    @kotlin.OptIn(markerClass = {androidx.compose.foundation.ExperimentalFoundationApi.class})
+    @kotlin.OptIn(markerClass = {androidx.compose.foundation.ExperimentalFoundationApi.class, androidx.compose.material.ExperimentalMaterialApi.class})
     public static final void BleScreen(@org.jetbrains.annotations.NotNull
     com.example.rssivalidation.BleViewModel viewModel, @org.jetbrains.annotations.NotNull
     com.example.rssivalidation.MainActivity mainActivity) {
     }
     
     @androidx.compose.runtime.Composable
-    @android.annotation.SuppressLint(value = {"UnusedMaterial3ScaffoldPaddingParameter", "StateFlowValueCalledInComposition", "CoroutineCreationDuringComposition"})
     public static final void DeviceImpl(@org.jetbrains.annotations.NotNull
     com.example.rssivalidation.BleViewModel viewModel) {
     }

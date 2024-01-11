@@ -7,18 +7,19 @@ INJECTED from /Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/mai
 MERGED from [bluconnect-debug.aar] /Users/samar_9911/.gradle/caches/transforms-3/8c2aeda2dc5f5f1b6388678344221bc0/transformed/bluconnect-debug/AndroidManifest.xml:2:1-37:12
 MERGED from [no.nordicsemi.android:ble-ktx:2.4.0] /Users/samar_9911/.gradle/caches/transforms-3/d37bcf8ab1cb012a3e822130b0db0dc9/transformed/ble-ktx-2.4.0/AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.compose.material3:material3:1.1.2] /Users/samar_9911/.gradle/caches/transforms-3/9154f98a7980d73af8c7a23344848b1c/transformed/material3-1.1.2/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.accompanist:accompanist-swiperefresh:0.31.1-alpha] /Users/samar_9911/.gradle/caches/transforms-3/a892fde30070baeabf17336fe58177c9/transformed/accompanist-swiperefresh-0.31.1-alpha/AndroidManifest.xml:17:1-25:12
 MERGED from [androidx.compose.material:material-ripple-android:1.5.4] /Users/samar_9911/.gradle/caches/transforms-3/8ded43af199e99ed5206c1a4c864e534/transformed/material-ripple-release/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.compose.material:material-icons-core-android:1.5.4] /Users/samar_9911/.gradle/caches/transforms-3/6d6143db40191924201c1ded36b0f08a/transformed/material-icons-core-release/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.compose.material:material-android:1.5.4] /Users/samar_9911/.gradle/caches/transforms-3/715b7e08b7e2bb7dc5a0142ee6e25da7/transformed/material-release/AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.compose.animation:animation-core-android:1.5.4] /Users/samar_9911/.gradle/caches/transforms-3/80ab046365bd0790a3e96037b3c87732/transformed/animation-core-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.foundation:foundation-android:1.5.4] /Users/samar_9911/.gradle/caches/transforms-3/5cd18f2b405c86817fc33eba8e61f1f7/transformed/foundation-release/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.compose.animation:animation-android:1.5.4] /Users/samar_9911/.gradle/caches/transforms-3/6010e4a1ded91f2371c6c191a8e3dc87/transformed/animation-release/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.compose.foundation:foundation-layout-android:1.5.4] /Users/samar_9911/.gradle/caches/transforms-3/b0a2544f7d5a43e5cc04790d22b6ff8c/transformed/foundation-layout-release/AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.compose.foundation:foundation-android:1.5.4] /Users/samar_9911/.gradle/caches/transforms-3/5cd18f2b405c86817fc33eba8e61f1f7/transformed/foundation-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.animation:animation-core-android:1.5.4] /Users/samar_9911/.gradle/caches/transforms-3/80ab046365bd0790a3e96037b3c87732/transformed/animation-core-release/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.compose.ui:ui-tooling-data-android:1.5.4] /Users/samar_9911/.gradle/caches/transforms-3/83ca32d16a596f388a6de8b570ea15cb/transformed/ui-tooling-data-release/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.compose.ui:ui-unit-android:1.5.4] /Users/samar_9911/.gradle/caches/transforms-3/702d00497e256e7a57f8f0d0496b18cc/transformed/ui-unit-release/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.compose.ui:ui-geometry-android:1.5.4] /Users/samar_9911/.gradle/caches/transforms-3/c57d3255dcc33d1d9586cdd79073e93c/transformed/ui-geometry-release/AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.compose.ui:ui-util-android:1.5.4] /Users/samar_9911/.gradle/caches/transforms-3/b7058dfdb1850005ad24cf35991c1390/transformed/ui-util-release/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.compose.ui:ui-text-android:1.5.4] /Users/samar_9911/.gradle/caches/transforms-3/e6207327aefae62441b42fa90c1c1431/transformed/ui-text-release/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-util-android:1.5.4] /Users/samar_9911/.gradle/caches/transforms-3/b7058dfdb1850005ad24cf35991c1390/transformed/ui-util-release/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.compose.ui:ui-tooling-preview-android:1.5.4] /Users/samar_9911/.gradle/caches/transforms-3/b83f363f61dd727bd5f5dedfbd3fa4ba/transformed/ui-tooling-preview-release/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.compose.ui:ui-graphics-android:1.5.4] /Users/samar_9911/.gradle/caches/transforms-3/70b7bbaafd4501b39a02b50332686265/transformed/ui-graphics-release/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.compose.ui:ui-android:1.5.4] /Users/samar_9911/.gradle/caches/transforms-3/96201ef264915a02967200df2fe2d053/transformed/ui-release/AndroidManifest.xml:2:1-7:12
@@ -334,30 +335,32 @@ MERGED from [no.nordicsemi.android:ble-ktx:2.4.0] /Users/samar_9911/.gradle/cach
 MERGED from [no.nordicsemi.android:ble-ktx:2.4.0] /Users/samar_9911/.gradle/caches/transforms-3/d37bcf8ab1cb012a3e822130b0db0dc9/transformed/ble-ktx-2.4.0/AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.compose.material3:material3:1.1.2] /Users/samar_9911/.gradle/caches/transforms-3/9154f98a7980d73af8c7a23344848b1c/transformed/material3-1.1.2/AndroidManifest.xml:20:5-44
 MERGED from [androidx.compose.material3:material3:1.1.2] /Users/samar_9911/.gradle/caches/transforms-3/9154f98a7980d73af8c7a23344848b1c/transformed/material3-1.1.2/AndroidManifest.xml:20:5-44
+MERGED from [com.google.accompanist:accompanist-swiperefresh:0.31.1-alpha] /Users/samar_9911/.gradle/caches/transforms-3/a892fde30070baeabf17336fe58177c9/transformed/accompanist-swiperefresh-0.31.1-alpha/AndroidManifest.xml:21:5-23:42
+MERGED from [com.google.accompanist:accompanist-swiperefresh:0.31.1-alpha] /Users/samar_9911/.gradle/caches/transforms-3/a892fde30070baeabf17336fe58177c9/transformed/accompanist-swiperefresh-0.31.1-alpha/AndroidManifest.xml:21:5-23:42
 MERGED from [androidx.compose.material:material-ripple-android:1.5.4] /Users/samar_9911/.gradle/caches/transforms-3/8ded43af199e99ed5206c1a4c864e534/transformed/material-ripple-release/AndroidManifest.xml:5:5-44
 MERGED from [androidx.compose.material:material-ripple-android:1.5.4] /Users/samar_9911/.gradle/caches/transforms-3/8ded43af199e99ed5206c1a4c864e534/transformed/material-ripple-release/AndroidManifest.xml:5:5-44
 MERGED from [androidx.compose.material:material-icons-core-android:1.5.4] /Users/samar_9911/.gradle/caches/transforms-3/6d6143db40191924201c1ded36b0f08a/transformed/material-icons-core-release/AndroidManifest.xml:5:5-44
 MERGED from [androidx.compose.material:material-icons-core-android:1.5.4] /Users/samar_9911/.gradle/caches/transforms-3/6d6143db40191924201c1ded36b0f08a/transformed/material-icons-core-release/AndroidManifest.xml:5:5-44
 MERGED from [androidx.compose.material:material-android:1.5.4] /Users/samar_9911/.gradle/caches/transforms-3/715b7e08b7e2bb7dc5a0142ee6e25da7/transformed/material-release/AndroidManifest.xml:5:5-44
 MERGED from [androidx.compose.material:material-android:1.5.4] /Users/samar_9911/.gradle/caches/transforms-3/715b7e08b7e2bb7dc5a0142ee6e25da7/transformed/material-release/AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.animation:animation-core-android:1.5.4] /Users/samar_9911/.gradle/caches/transforms-3/80ab046365bd0790a3e96037b3c87732/transformed/animation-core-release/AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.animation:animation-core-android:1.5.4] /Users/samar_9911/.gradle/caches/transforms-3/80ab046365bd0790a3e96037b3c87732/transformed/animation-core-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.foundation:foundation-android:1.5.4] /Users/samar_9911/.gradle/caches/transforms-3/5cd18f2b405c86817fc33eba8e61f1f7/transformed/foundation-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.foundation:foundation-android:1.5.4] /Users/samar_9911/.gradle/caches/transforms-3/5cd18f2b405c86817fc33eba8e61f1f7/transformed/foundation-release/AndroidManifest.xml:5:5-44
 MERGED from [androidx.compose.animation:animation-android:1.5.4] /Users/samar_9911/.gradle/caches/transforms-3/6010e4a1ded91f2371c6c191a8e3dc87/transformed/animation-release/AndroidManifest.xml:5:5-44
 MERGED from [androidx.compose.animation:animation-android:1.5.4] /Users/samar_9911/.gradle/caches/transforms-3/6010e4a1ded91f2371c6c191a8e3dc87/transformed/animation-release/AndroidManifest.xml:5:5-44
 MERGED from [androidx.compose.foundation:foundation-layout-android:1.5.4] /Users/samar_9911/.gradle/caches/transforms-3/b0a2544f7d5a43e5cc04790d22b6ff8c/transformed/foundation-layout-release/AndroidManifest.xml:5:5-44
 MERGED from [androidx.compose.foundation:foundation-layout-android:1.5.4] /Users/samar_9911/.gradle/caches/transforms-3/b0a2544f7d5a43e5cc04790d22b6ff8c/transformed/foundation-layout-release/AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.foundation:foundation-android:1.5.4] /Users/samar_9911/.gradle/caches/transforms-3/5cd18f2b405c86817fc33eba8e61f1f7/transformed/foundation-release/AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.foundation:foundation-android:1.5.4] /Users/samar_9911/.gradle/caches/transforms-3/5cd18f2b405c86817fc33eba8e61f1f7/transformed/foundation-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.animation:animation-core-android:1.5.4] /Users/samar_9911/.gradle/caches/transforms-3/80ab046365bd0790a3e96037b3c87732/transformed/animation-core-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.animation:animation-core-android:1.5.4] /Users/samar_9911/.gradle/caches/transforms-3/80ab046365bd0790a3e96037b3c87732/transformed/animation-core-release/AndroidManifest.xml:5:5-44
 MERGED from [androidx.compose.ui:ui-tooling-data-android:1.5.4] /Users/samar_9911/.gradle/caches/transforms-3/83ca32d16a596f388a6de8b570ea15cb/transformed/ui-tooling-data-release/AndroidManifest.xml:5:5-44
 MERGED from [androidx.compose.ui:ui-tooling-data-android:1.5.4] /Users/samar_9911/.gradle/caches/transforms-3/83ca32d16a596f388a6de8b570ea15cb/transformed/ui-tooling-data-release/AndroidManifest.xml:5:5-44
 MERGED from [androidx.compose.ui:ui-unit-android:1.5.4] /Users/samar_9911/.gradle/caches/transforms-3/702d00497e256e7a57f8f0d0496b18cc/transformed/ui-unit-release/AndroidManifest.xml:5:5-44
 MERGED from [androidx.compose.ui:ui-unit-android:1.5.4] /Users/samar_9911/.gradle/caches/transforms-3/702d00497e256e7a57f8f0d0496b18cc/transformed/ui-unit-release/AndroidManifest.xml:5:5-44
 MERGED from [androidx.compose.ui:ui-geometry-android:1.5.4] /Users/samar_9911/.gradle/caches/transforms-3/c57d3255dcc33d1d9586cdd79073e93c/transformed/ui-geometry-release/AndroidManifest.xml:5:5-44
 MERGED from [androidx.compose.ui:ui-geometry-android:1.5.4] /Users/samar_9911/.gradle/caches/transforms-3/c57d3255dcc33d1d9586cdd79073e93c/transformed/ui-geometry-release/AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.ui:ui-util-android:1.5.4] /Users/samar_9911/.gradle/caches/transforms-3/b7058dfdb1850005ad24cf35991c1390/transformed/ui-util-release/AndroidManifest.xml:5:5-44
-MERGED from [androidx.compose.ui:ui-util-android:1.5.4] /Users/samar_9911/.gradle/caches/transforms-3/b7058dfdb1850005ad24cf35991c1390/transformed/ui-util-release/AndroidManifest.xml:5:5-44
 MERGED from [androidx.compose.ui:ui-text-android:1.5.4] /Users/samar_9911/.gradle/caches/transforms-3/e6207327aefae62441b42fa90c1c1431/transformed/ui-text-release/AndroidManifest.xml:5:5-44
 MERGED from [androidx.compose.ui:ui-text-android:1.5.4] /Users/samar_9911/.gradle/caches/transforms-3/e6207327aefae62441b42fa90c1c1431/transformed/ui-text-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-util-android:1.5.4] /Users/samar_9911/.gradle/caches/transforms-3/b7058dfdb1850005ad24cf35991c1390/transformed/ui-util-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-util-android:1.5.4] /Users/samar_9911/.gradle/caches/transforms-3/b7058dfdb1850005ad24cf35991c1390/transformed/ui-util-release/AndroidManifest.xml:5:5-44
 MERGED from [androidx.compose.ui:ui-tooling-preview-android:1.5.4] /Users/samar_9911/.gradle/caches/transforms-3/b83f363f61dd727bd5f5dedfbd3fa4ba/transformed/ui-tooling-preview-release/AndroidManifest.xml:20:5-44
 MERGED from [androidx.compose.ui:ui-tooling-preview-android:1.5.4] /Users/samar_9911/.gradle/caches/transforms-3/b83f363f61dd727bd5f5dedfbd3fa4ba/transformed/ui-tooling-preview-release/AndroidManifest.xml:20:5-44
 MERGED from [androidx.compose.ui:ui-graphics-android:1.5.4] /Users/samar_9911/.gradle/caches/transforms-3/70b7bbaafd4501b39a02b50332686265/transformed/ui-graphics-release/AndroidManifest.xml:5:5-44
@@ -548,6 +551,8 @@ MERGED from [androidx.print:print:1.0.0] /Users/samar_9911/.gradle/caches/transf
 MERGED from [androidx.print:print:1.0.0] /Users/samar_9911/.gradle/caches/transforms-3/639cee13c112e6b93fc45ef0f8e14866/transformed/print-1.0.0/AndroidManifest.xml:20:5-44
 	android:targetSdkVersion
 		INJECTED from /Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml
+	tools:ignore
+		ADDED from [com.google.accompanist:accompanist-swiperefresh:0.31.1-alpha] /Users/samar_9911/.gradle/caches/transforms-3/a892fde30070baeabf17336fe58177c9/transformed/accompanist-swiperefresh-0.31.1-alpha/AndroidManifest.xml:23:9-39
 	android:minSdkVersion
 		INJECTED from /Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml
 uses-feature#android.hardware.bluetooth

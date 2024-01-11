@@ -112,5 +112,6 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.2")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
+    runtimeOnly("com.google.accompanist:accompanist-swiperefresh:0.31.1-alpha")
 
 }

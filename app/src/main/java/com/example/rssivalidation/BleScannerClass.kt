@@ -14,7 +14,7 @@ class BleScannerClass(
     private val bluetoothAdapter: BluetoothAdapter
 
 ) {
-    private val scanResults: MutableList<ScanResult> = mutableListOf()
+    val scanResults: MutableList<ScanResult> = mutableListOf()
     private var leScanCallback: ScanCallback? = null
     var rssiRidegrid: Int = -0
     var resultrssi: Int = 12
@@ -35,10 +35,11 @@ class BleScannerClass(
 //                if (devAddress == resultrssi.toString()){
                     Log.d("RSSSSI", "${resultrssi}")
                     Log.d("devADDD", "${devAddress}")
+                if (devAddress == resultrssi.toString())
+                    resultrssi = result.rssi
                     viewModel.updateBleRssi(resultrssi)
-
+                    scanResults.add(result)
 //                }
-                scanResults.add(result)
                 viewModel.updateScanResults(scanResults)
             }
         }

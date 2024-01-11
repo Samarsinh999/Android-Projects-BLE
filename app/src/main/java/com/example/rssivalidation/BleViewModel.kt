@@ -8,6 +8,8 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import kotlinx.coroutines.DelicateCoroutinesApi
+import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -50,10 +52,18 @@ class BleViewModel : ViewModel() {
     fun updateBleRssi(pwd: Int) {
         viewModelScope.launch {
             _Rssi.tryEmit(pwd)
-//            Log.d("Viewmodel RSSI", "${pwd}")
+            Log.d("Viewmodel RSSI", "${pwd}")
             delay(1000)
         }
     }
+
+    @OptIn(DelicateCoroutinesApi::class)
+    fun clearAndSetData() {
+          GlobalScope.launch {
+              _scanResults.value = emptyList()
+          }
+    }
+
 }
 
 sealed class TestScenarioResult {
