@@ -149,6 +149,7 @@ class MainActivity : ComponentActivity(), ServiceConnection {
 
         bluService.value?.device?.rideGrid?.turnOn()
         bleScanner.startBleScanner(scanFilters, scanSettings)
+       Log.d("Size of data","${bleScanner.scanResults.size}")
     }
 
     fun stopBleScanner() {

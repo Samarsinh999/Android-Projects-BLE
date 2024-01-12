@@ -45,10 +45,13 @@ import kotlin.concurrent.schedule
 fun BleScreen(viewModel: BleViewModel, mainActivity: MainActivity) {
     val refreshScope = rememberCoroutineScope()
     var refreshing by remember { mutableStateOf(false) }
+    val isScanning by remember { mutableStateOf(true) }
 
     fun refresh() = refreshScope.launch {
         refreshing = true
        Timer().schedule(1000){
+           mainActivity.startBleScanner()
+           viewModel.clearAndSetData()
            refreshing = false
        }
     }
@@ -79,10 +82,12 @@ fun BleScreen(viewModel: BleViewModel, mainActivity: MainActivity) {
                     DeviceImpl(viewModel = viewModel)
                 }
         }
+
         val scanResults by viewModel.scanResults
         Box(Modifier.pullRefresh(state)) {
             LazyColumn(
-                modifier = Modifier.height(450.dp)
+                modifier = Modifier
+                    .height(450.dp)
                     .width(500.dp)
             ) {
                 stickyHeader {
@@ -116,7 +121,8 @@ fun BleScreen(viewModel: BleViewModel, mainActivity: MainActivity) {
                     .padding(16.dp),
                 onClick = {
                     mainActivity.startBleScanner()
-                }
+                },
+                enabled = true
             ) {
                 Text(text = "Start Scan")
             }
@@ -125,9 +131,10 @@ fun BleScreen(viewModel: BleViewModel, mainActivity: MainActivity) {
                 modifier = Modifier
                     .padding(16.dp),
                 onClick = {
-                    viewModel.clearAndSetData()
                     mainActivity.stopBleScanner()
+                    viewModel.clearAndSetData()
                 },
+                enabled = true
             ) {
                 Text(text = "Stop Scan")
             }
@@ -196,7 +203,7 @@ fun DeviceImpl(viewModel: BleViewModel) {
 @SuppressLint("MissingPermission", "UnrememberedMutableState")
 @Composable
 fun ScanResultItem(result: ScanResult,viewModel: BleViewModel) {
-//    val rRssi by viewModel.resultdRssi.collectAsState()
+    val rRssi by viewModel.resultdRssi.collectAsState()
     Column(
         modifier = Modifier
             .fillMaxWidth()
@@ -236,7 +243,7 @@ fun ScanResultItem(result: ScanResult,viewModel: BleViewModel) {
                         color = Color.Gray
                     )
                     Text(
-                        text = result.rssi.toString(),
+                        text = rRssi.toString(),
                         color = Color.Gray
                     )
                 }

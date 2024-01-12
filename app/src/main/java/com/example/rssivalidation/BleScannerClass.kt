@@ -16,37 +16,64 @@ class BleScannerClass(
 ) {
     val scanResults: MutableList<ScanResult> = mutableListOf()
     private var leScanCallback: ScanCallback? = null
+    private var isScanning: Boolean = false
     var rssiRidegrid: Int = -0
-    var resultrssi: Int = 12
+    var _RSSSI: Int = -0
 
     fun startBleScanner(scanFilters: List<ScanFilter>, scanSettings: ScanSettings) {
-        leScanCallback = object : ScanCallback() {
-            @SuppressLint("SuspiciousIndentation")
-            override fun onScanResult(callbackType: Int, result: ScanResult) {
-                super.onScanResult(callbackType, result)
-                if (result.device.address == viewModel._ridegridMacAddress.value) {
-//                    Log.d("Ride MAc", "${ridegriMac}")
-//                    Log.d("Device address", "${result.device.address}")
-                    rssiRidegrid = result.rssi
-                 viewModel.updateRidegridRssi(rssiRidegrid)
-                }
-                resultrssi = result.rssi
-                val devAddress = result.device.address
-//                if (devAddress == resultrssi.toString()){
-                    Log.d("RSSSSI", "${resultrssi}")
-                    Log.d("devADDD", "${devAddress}")
-                if (devAddress == resultrssi.toString())
-                    resultrssi = result.rssi
-                    viewModel.updateBleRssi(resultrssi)
+        if (!isScanning) {
+            leScanCallback = object : ScanCallback() {
+                @SuppressLint("SuspiciousIndentation")
+                override fun onScanResult(callbackType: Int, result: ScanResult) {
+                    super.onScanResult(callbackType, result)
                     scanResults.add(result)
-//                }
-                viewModel.updateScanResults(scanResults)
+                    viewModel.updateScanResults(scanResults)
+                    if (result.device.address == result.rssi.toString()){
+                        _RSSSI = result.rssi
+                        viewModel.updateBleRssi(_RSSSI)
+                        Log.d("ClassnRSSI", "${result.rssi}")
+                    }
+                    handleScanResult(result)
+                }
             }
+            try {
+                bluetoothAdapter.bluetoothLeScanner.startScan(scanFilters, scanSettings, leScanCallback)
+                isScanning = true
+                Log.d("BleScannerClass", "Scan started")
+            }
+           catch (e: Exception) {
+                Log.e("BleScannerClass", "Error starting scan: ${e.message}")
+           }
         }
-        bluetoothAdapter.bluetoothLeScanner.startScan(scanFilters, scanSettings, leScanCallback)
+        else {
+            Log.d("BleScannerClass", "Scan is already in progress")
+        }
     }
 
     fun stopBleScanner() {
-        bluetoothAdapter.bluetoothLeScanner.stopScan(leScanCallback)
+//        if (isScanning) {
+//            bluetoothAdapter.bluetoothLeScanner.stopScan(leScanCallback)
+//            leScanCallback = null
+//            isScanning = false
+//        }
+        if (isScanning) {
+            try {
+                bluetoothAdapter.bluetoothLeScanner.stopScan(leScanCallback)
+                leScanCallback = null
+                isScanning = false
+                Log.d("BleScannerClass", "Scan stopped")
+            } catch (e: Exception) {
+                Log.e("BleScannerClass", "Error stopping scan: ${e.message}")
+            }
+        } else {
+            Log.d("BleScannerClass", "No scan in progress to stop")
+        }
+    }
+
+    private fun handleScanResult(result: ScanResult) {
+        if (result.device.address == viewModel._ridegridMacAddress.value) {
+            rssiRidegrid = result.rssi
+            viewModel.updateRidegridRssi(rssiRidegrid)
+        }
     }
 }

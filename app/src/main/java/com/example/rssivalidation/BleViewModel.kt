@@ -3,7 +3,7 @@ package com.example.rssivalidation
 import android.annotation.SuppressLint
 import android.bluetooth.le.ScanResult
 import android.util.Log
-import androidx.compose.runtime.State
+import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -27,7 +27,7 @@ class BleViewModel : ViewModel() {
         get() = _Rssi
 
     private val _scanResults = mutableStateOf(emptyList<ScanResult>())
-    val scanResults: State<List<ScanResult>> = _scanResults
+    val scanResults: MutableState<List<ScanResult>> get() = _scanResults
 
     fun updateScanResults(newResults: List<ScanResult>) {
         val currentResult = _scanResults.value
@@ -60,10 +60,9 @@ class BleViewModel : ViewModel() {
     @OptIn(DelicateCoroutinesApi::class)
     fun clearAndSetData() {
           GlobalScope.launch {
-              _scanResults.value = emptyList()
+              scanResults.value = emptyList()
           }
     }
-
 }
 
 sealed class TestScenarioResult {

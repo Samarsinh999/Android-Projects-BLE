@@ -41,35 +41,35 @@
 24-->/Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:10:22-74
 25        android:minSdkVersion="34" />
 25-->/Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:11:9-35
-26    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
-26-->/Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:12:5-77
-26-->/Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:12:22-74
-27    <uses-permission
-27-->/Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:13:5-14:37
-28        android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC"
-28-->/Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:13:22-84
-29        android:minSdkVersion="34" />
-29-->/Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:14:9-35
-30
-31    <uses-feature
-31-->[bluconnect-debug.aar] /Users/samar_9911/.gradle/caches/transforms-3/8c2aeda2dc5f5f1b6388678344221bc0/transformed/bluconnect-debug/AndroidManifest.xml:8:5-10:36
-32        android:name="android.hardware.bluetooth"
-32-->[bluconnect-debug.aar] /Users/samar_9911/.gradle/caches/transforms-3/8c2aeda2dc5f5f1b6388678344221bc0/transformed/bluconnect-debug/AndroidManifest.xml:9:9-50
-33        android:required="false" />
-33-->[bluconnect-debug.aar] /Users/samar_9911/.gradle/caches/transforms-3/8c2aeda2dc5f5f1b6388678344221bc0/transformed/bluconnect-debug/AndroidManifest.xml:10:9-33
-34    <uses-feature
-34-->[bluconnect-debug.aar] /Users/samar_9911/.gradle/caches/transforms-3/8c2aeda2dc5f5f1b6388678344221bc0/transformed/bluconnect-debug/AndroidManifest.xml:11:5-13:36
-35        android:name="android.hardware.bluetooth_le"
-35-->[bluconnect-debug.aar] /Users/samar_9911/.gradle/caches/transforms-3/8c2aeda2dc5f5f1b6388678344221bc0/transformed/bluconnect-debug/AndroidManifest.xml:12:9-53
-36        android:required="false" />
-36-->[bluconnect-debug.aar] /Users/samar_9911/.gradle/caches/transforms-3/8c2aeda2dc5f5f1b6388678344221bc0/transformed/bluconnect-debug/AndroidManifest.xml:13:9-33
-37
-38    <uses-permission android:name="android.permission.INTERNET" />
-38-->[bluconnect-debug.aar] /Users/samar_9911/.gradle/caches/transforms-3/8c2aeda2dc5f5f1b6388678344221bc0/transformed/bluconnect-debug/AndroidManifest.xml:15:5-67
-38-->[bluconnect-debug.aar] /Users/samar_9911/.gradle/caches/transforms-3/8c2aeda2dc5f5f1b6388678344221bc0/transformed/bluconnect-debug/AndroidManifest.xml:15:22-64
-39    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
-39-->[bluconnect-debug.aar] /Users/samar_9911/.gradle/caches/transforms-3/8c2aeda2dc5f5f1b6388678344221bc0/transformed/bluconnect-debug/AndroidManifest.xml:25:5-85
-39-->[bluconnect-debug.aar] /Users/samar_9911/.gradle/caches/transforms-3/8c2aeda2dc5f5f1b6388678344221bc0/transformed/bluconnect-debug/AndroidManifest.xml:25:22-82
+26    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+26-->/Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:12:5-84
+26-->/Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:12:22-82
+27    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+27-->/Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:13:5-77
+27-->/Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:13:22-74
+28    <uses-permission
+28-->/Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:14:5-15:37
+29        android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC"
+29-->/Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:14:22-84
+30        android:minSdkVersion="34" />
+30-->/Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:15:9-35
+31
+32    <uses-feature
+32-->[bluconnect-debug.aar] /Users/samar_9911/.gradle/caches/transforms-3/8c2aeda2dc5f5f1b6388678344221bc0/transformed/bluconnect-debug/AndroidManifest.xml:8:5-10:36
+33        android:name="android.hardware.bluetooth"
+33-->[bluconnect-debug.aar] /Users/samar_9911/.gradle/caches/transforms-3/8c2aeda2dc5f5f1b6388678344221bc0/transformed/bluconnect-debug/AndroidManifest.xml:9:9-50
+34        android:required="false" />
+34-->[bluconnect-debug.aar] /Users/samar_9911/.gradle/caches/transforms-3/8c2aeda2dc5f5f1b6388678344221bc0/transformed/bluconnect-debug/AndroidManifest.xml:10:9-33
+35    <uses-feature
+35-->[bluconnect-debug.aar] /Users/samar_9911/.gradle/caches/transforms-3/8c2aeda2dc5f5f1b6388678344221bc0/transformed/bluconnect-debug/AndroidManifest.xml:11:5-13:36
+36        android:name="android.hardware.bluetooth_le"
+36-->[bluconnect-debug.aar] /Users/samar_9911/.gradle/caches/transforms-3/8c2aeda2dc5f5f1b6388678344221bc0/transformed/bluconnect-debug/AndroidManifest.xml:12:9-53
+37        android:required="false" />
+37-->[bluconnect-debug.aar] /Users/samar_9911/.gradle/caches/transforms-3/8c2aeda2dc5f5f1b6388678344221bc0/transformed/bluconnect-debug/AndroidManifest.xml:13:9-33
+38
+39    <uses-permission android:name="android.permission.INTERNET" />
+39-->[bluconnect-debug.aar] /Users/samar_9911/.gradle/caches/transforms-3/8c2aeda2dc5f5f1b6388678344221bc0/transformed/bluconnect-debug/AndroidManifest.xml:15:5-67
+39-->[bluconnect-debug.aar] /Users/samar_9911/.gradle/caches/transforms-3/8c2aeda2dc5f5f1b6388678344221bc0/transformed/bluconnect-debug/AndroidManifest.xml:15:22-64
 40    <uses-permission android:name="android.permission.RECORD_AUDIO" />
 40-->[bluconnect-debug.aar] /Users/samar_9911/.gradle/caches/transforms-3/8c2aeda2dc5f5f1b6388678344221bc0/transformed/bluconnect-debug/AndroidManifest.xml:26:5-71
 40-->[bluconnect-debug.aar] /Users/samar_9911/.gradle/caches/transforms-3/8c2aeda2dc5f5f1b6388678344221bc0/transformed/bluconnect-debug/AndroidManifest.xml:26:22-68
@@ -120,52 +120,52 @@
 58-->[androidx.core:core:1.12.0] /Users/samar_9911/.gradle/caches/transforms-3/2447b8c1cd37cd6eb78717eafe9863a5/transformed/core-1.12.0/AndroidManifest.xml:26:22-94
 59
 60    <application
-60-->/Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:15:5-36:19
+60-->/Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:16:5-37:19
 61        android:allowBackup="true"
-61-->/Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:16:9-35
+61-->/Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:17:9-35
 62        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 62-->[androidx.core:core:1.12.0] /Users/samar_9911/.gradle/caches/transforms-3/2447b8c1cd37cd6eb78717eafe9863a5/transformed/core-1.12.0/AndroidManifest.xml:28:18-86
 63        android:debuggable="true"
 64        android:extractNativeLibs="false"
 65        android:icon="@mipmap/ic_launcher"
-65-->/Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:17:9-43
+65-->/Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:18:9-43
 66        android:label="@string/app_name"
-66-->/Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:18:9-41
+66-->/Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:19:9-41
 67        android:roundIcon="@mipmap/ic_launcher_round"
-67-->/Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:19:9-54
+67-->/Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:20:9-54
 68        android:testOnly="true"
 69        android:theme="@style/Theme.RssiValidation" >
-69-->/Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:20:9-52
+69-->/Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:21:9-52
 70        <activity
-70-->/Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:21:9-29:20
+70-->/Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:22:9-30:20
 71            android:name="com.example.rssivalidation.MainActivity"
-71-->/Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:22:13-41
+71-->/Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:23:13-41
 72            android:exported="true"
-72-->/Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:23:13-36
+72-->/Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:24:13-36
 73            android:theme="@style/Theme.RssiValidation" >
-73-->/Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:24:13-56
+73-->/Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:25:13-56
 74            <intent-filter>
-74-->/Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:25:13-28:29
+74-->/Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:26:13-29:29
 75                <action android:name="android.intent.action.MAIN" />
-75-->/Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:26:17-69
-75-->/Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:26:25-66
+75-->/Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:27:17-69
+75-->/Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:27:25-66
 76
 77                <category android:name="android.intent.category.LAUNCHER" />
-77-->/Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:27:17-77
-77-->/Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:27:27-74
+77-->/Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:28:17-77
+77-->/Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:28:27-74
 78            </intent-filter>
 79        </activity>
 80
 81        <service
-81-->/Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:30:9-35:58
+81-->/Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:31:9-36:58
 82            android:name="com.example.rssivalidation.SerivcesBle"
-82-->/Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:31:13-40
+82-->/Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:32:13-40
 83            android:enabled="true"
-83-->/Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:33:13-35
+83-->/Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:34:13-35
 84            android:exported="false"
-84-->/Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:34:13-37
+84-->/Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:35:13-37
 85            android:foregroundServiceType="dataSync" />
-85-->/Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:32:13-53
+85-->/Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:33:13-53
 86        <service android:name="com.aptener.bluconnect.DfuService" />
 86-->[bluconnect-debug.aar] /Users/samar_9911/.gradle/caches/transforms-3/8c2aeda2dc5f5f1b6388678344221bc0/transformed/bluconnect-debug/AndroidManifest.xml:34:9-69
 86-->[bluconnect-debug.aar] /Users/samar_9911/.gradle/caches/transforms-3/8c2aeda2dc5f5f1b6388678344221bc0/transformed/bluconnect-debug/AndroidManifest.xml:34:18-66

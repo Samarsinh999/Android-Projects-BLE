@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:2:1-38:12
-INJECTED from /Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:2:1-38:12
-INJECTED from /Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:2:1-38:12
-INJECTED from /Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:2:1-38:12
+ADDED from /Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:2:1-39:12
+INJECTED from /Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:2:1-39:12
+INJECTED from /Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:2:1-39:12
+INJECTED from /Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:2:1-39:12
 MERGED from [bluconnect-debug.aar] /Users/samar_9911/.gradle/caches/transforms-3/8c2aeda2dc5f5f1b6388678344221bc0/transformed/bluconnect-debug/AndroidManifest.xml:2:1-37:12
 MERGED from [no.nordicsemi.android:ble-ktx:2.4.0] /Users/samar_9911/.gradle/caches/transforms-3/d37bcf8ab1cb012a3e822130b0db0dc9/transformed/ble-ktx-2.4.0/AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.compose.material3:material3:1.1.2] /Users/samar_9911/.gradle/caches/transforms-3/9154f98a7980d73af8c7a23344848b1c/transformed/material3-1.1.2/AndroidManifest.xml:17:1-22:12
@@ -188,19 +188,25 @@ ADDED from /Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/A
 		ADDED from /Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:11:9-35
 	android:name
 		ADDED from /Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:10:22-74
+uses-permission#android.permission.ACCESS_BACKGROUND_LOCATION
+ADDED from /Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:12:5-84
+MERGED from [bluconnect-debug.aar] /Users/samar_9911/.gradle/caches/transforms-3/8c2aeda2dc5f5f1b6388678344221bc0/transformed/bluconnect-debug/AndroidManifest.xml:25:5-85
+MERGED from [bluconnect-debug.aar] /Users/samar_9911/.gradle/caches/transforms-3/8c2aeda2dc5f5f1b6388678344221bc0/transformed/bluconnect-debug/AndroidManifest.xml:25:5-85
+	android:name
+		ADDED from /Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:12:22-82
 uses-permission#android.permission.POST_NOTIFICATIONS
-ADDED from /Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:12:5-77
+ADDED from /Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:13:5-77
 	android:name
-		ADDED from /Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:12:22-74
+		ADDED from /Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:13:22-74
 uses-permission#android.permission.FOREGROUND_SERVICE_DATA_SYNC
-ADDED from /Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:13:5-14:37
+ADDED from /Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:14:5-15:37
 	android:minSdkVersion
-		ADDED from /Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:14:9-35
+		ADDED from /Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:15:9-35
 	android:name
-		ADDED from /Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:13:22-84
+		ADDED from /Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:14:22-84
 application
-ADDED from /Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:15:5-36:19
-INJECTED from /Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:15:5-36:19
+ADDED from /Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:16:5-37:19
+INJECTED from /Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:16:5-37:19
 MERGED from [bluconnect-debug.aar] /Users/samar_9911/.gradle/caches/transforms-3/8c2aeda2dc5f5f1b6388678344221bc0/transformed/bluconnect-debug/AndroidManifest.xml:33:5-35:19
 MERGED from [bluconnect-debug.aar] /Users/samar_9911/.gradle/caches/transforms-3/8c2aeda2dc5f5f1b6388678344221bc0/transformed/bluconnect-debug/AndroidManifest.xml:33:5-35:19
 MERGED from [androidx.compose.ui:ui-test-manifest:1.5.4] /Users/samar_9911/.gradle/caches/transforms-3/e2a08033347b8f25a55f89eb66146601/transformed/ui-test-manifest-1.5.4/AndroidManifest.xml:22:5-26:19
@@ -286,45 +292,45 @@ MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/samar_9911/.gradle/c
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.12.0] /Users/samar_9911/.gradle/caches/transforms-3/2447b8c1cd37cd6eb78717eafe9863a5/transformed/core-1.12.0/AndroidManifest.xml:28:18-86
 	android:label
-		ADDED from /Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:18:9-41
+		ADDED from /Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:19:9-41
 	android:roundIcon
-		ADDED from /Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:19:9-54
+		ADDED from /Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:20:9-54
 	android:icon
-		ADDED from /Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:17:9-43
+		ADDED from /Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:18:9-43
 	android:allowBackup
-		ADDED from /Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:16:9-35
+		ADDED from /Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:17:9-35
 	android:theme
-		ADDED from /Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:20:9-52
+		ADDED from /Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:21:9-52
 activity#com.example.rssivalidation.MainActivity
-ADDED from /Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:21:9-29:20
+ADDED from /Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:22:9-30:20
 	android:exported
-		ADDED from /Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:23:13-36
+		ADDED from /Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:24:13-36
 	android:theme
-		ADDED from /Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:24:13-56
+		ADDED from /Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:25:13-56
 	android:name
-		ADDED from /Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:22:13-41
+		ADDED from /Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:23:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:25:13-28:29
+ADDED from /Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:26:13-29:29
 action#android.intent.action.MAIN
-ADDED from /Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:26:17-69
+ADDED from /Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:27:17-69
 	android:name
-		ADDED from /Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:26:25-66
+		ADDED from /Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:27:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:27:17-77
+ADDED from /Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:28:17-77
 	android:name
-		ADDED from /Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:27:27-74
+		ADDED from /Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:28:27-74
 service#com.example.rssivalidation.SerivcesBle
-ADDED from /Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:30:9-35:58
+ADDED from /Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:31:9-36:58
 	android:enabled
-		ADDED from /Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:33:13-35
+		ADDED from /Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:34:13-35
 	android:exported
-		ADDED from /Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:34:13-37
+		ADDED from /Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:35:13-37
 	tools:ignore
-		ADDED from /Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:35:13-55
+		ADDED from /Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:36:13-55
 	android:foregroundServiceType
-		ADDED from /Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:32:13-53
+		ADDED from /Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:33:13-53
 	android:name
-		ADDED from /Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:31:13-40
+		ADDED from /Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml:32:13-40
 uses-sdk
 INJECTED from /Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/samar_9911/AndroidStudioProjects/RssiValidation/app/src/main/AndroidManifest.xml
@@ -587,10 +593,6 @@ MERGED from [com.google.android.gms:play-services-measurement-sdk-api:21.5.0] /U
 MERGED from [com.google.android.gms:play-services-measurement-sdk-api:21.5.0] /Users/samar_9911/.gradle/caches/transforms-3/ca511a2d76b38b4557795b19ac17cb30/transformed/play-services-measurement-sdk-api-21.5.0/AndroidManifest.xml:23:5-67
 	android:name
 		ADDED from [bluconnect-debug.aar] /Users/samar_9911/.gradle/caches/transforms-3/8c2aeda2dc5f5f1b6388678344221bc0/transformed/bluconnect-debug/AndroidManifest.xml:15:22-64
-uses-permission#android.permission.ACCESS_BACKGROUND_LOCATION
-ADDED from [bluconnect-debug.aar] /Users/samar_9911/.gradle/caches/transforms-3/8c2aeda2dc5f5f1b6388678344221bc0/transformed/bluconnect-debug/AndroidManifest.xml:25:5-85
-	android:name
-		ADDED from [bluconnect-debug.aar] /Users/samar_9911/.gradle/caches/transforms-3/8c2aeda2dc5f5f1b6388678344221bc0/transformed/bluconnect-debug/AndroidManifest.xml:25:22-82
 uses-permission#android.permission.RECORD_AUDIO
 ADDED from [bluconnect-debug.aar] /Users/samar_9911/.gradle/caches/transforms-3/8c2aeda2dc5f5f1b6388678344221bc0/transformed/bluconnect-debug/AndroidManifest.xml:26:5-71
 	android:name
