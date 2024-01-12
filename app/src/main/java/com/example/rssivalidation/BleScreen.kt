@@ -199,11 +199,62 @@ fun DeviceImpl(viewModel: BleViewModel) {
         }
     }
 }
+//
+//@SuppressLint("MissingPermission", "UnrememberedMutableState")
+//@Composable
+//fun ScanResultItem(result: ScanResult,viewModel: BleViewModel) {
+//
+//    Column(
+//        modifier = Modifier
+//            .fillMaxWidth()
+//            .padding(16.dp)
+//            .background(Color.White)
+//    ) {
+//        Row {
+//            // First Column
+//            Column(
+//                modifier = Modifier.weight(1f)
+//            ) {
+//                Text(
+//                    text = "Name:",
+//                    fontWeight = FontWeight.Bold
+//                )
+//                if (result.device.name != null){
+//                    Text(text = result.device.name)
+//                }
+//                Text(
+//                    text = "MAC Address:",
+//                    fontWeight = FontWeight.Bold
+//                )
+//                Text(text = result.device.address)
+//            }
+//            Column(
+//                modifier = Modifier
+//                    .weight(1f)
+//                    .padding(start = 16.dp)
+//            ) {
+//                Row(
+//                    modifier = Modifier.fillMaxWidth(),
+//                    horizontalArrangement = Arrangement.Absolute.Right
+//                ) {
+//                    Text(
+//                        text = "RSSI:",
+//                        fontWeight = FontWeight.Bold,
+//                        color = Color.Gray
+//                    )
+//                    Text(
+//                        text = result.rssi.toString(),
+//                        color = Color.Gray
+//                    )
+//                }
+//            }
+//        }
+//    }
+//}
 
 @SuppressLint("MissingPermission", "UnrememberedMutableState")
 @Composable
-fun ScanResultItem(result: ScanResult,viewModel: BleViewModel) {
-    val rRssi by viewModel.resultdRssi.collectAsState()
+fun ScanResultItem(result: ScanResult, viewModel: BleViewModel) {
     Column(
         modifier = Modifier
             .fillMaxWidth()
@@ -219,7 +270,7 @@ fun ScanResultItem(result: ScanResult,viewModel: BleViewModel) {
                     text = "Name:",
                     fontWeight = FontWeight.Bold
                 )
-                if (result.device.name != null){
+                if (result.device.name != null) {
                     Text(text = result.device.name)
                 }
                 Text(
@@ -228,26 +279,40 @@ fun ScanResultItem(result: ScanResult,viewModel: BleViewModel) {
                 )
                 Text(text = result.device.address)
             }
+            // Second Column
             Column(
                 modifier = Modifier
                     .weight(1f)
                     .padding(start = 16.dp)
             ) {
-                Row(
-                    modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.Absolute.Right
-                ) {
-                    Text(
-                        text = "RSSI:",
-                        fontWeight = FontWeight.Bold,
-                        color = Color.Gray
-                    )
-                    Text(
-                        text = rRssi.toString(),
-                        color = Color.Gray
-                    )
-                }
+                // Displays Dyanamic RSSI here
+                val deviceAddress = result.device.address
+                val rssi by viewModel.observeRssi(deviceAddress).collectAsState()
+                Text(
+                    text = "RSSI: ${rssi ?: "N/A"}",
+                    fontWeight = FontWeight.Bold,
+                    color = Color.Gray
+                )
+
+                // Initial RSSI when Scanned
+//                Row(
+//                    modifier = Modifier.fillMaxWidth(),
+//                    horizontalArrangement = Arrangement.Absolute.Right
+//                ) {
+//                    Text(
+//                        text = "Original RSSI:",
+//                        fontWeight = FontWeight.Bold,
+//                        color = Color.Gray
+//                    )
+//                    Text(
+//                        text = result.rssi.toString(),
+//                        color = Color.Gray
+//                    )
+//                }
             }
         }
     }
 }
+
+
+//    val rRssi by viewModel.resultdRssi.collectAsState()

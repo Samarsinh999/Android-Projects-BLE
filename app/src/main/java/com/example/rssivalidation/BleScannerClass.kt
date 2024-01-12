@@ -21,53 +21,25 @@ class BleScannerClass(
     var _RSSSI: Int = -0
 
     fun startBleScanner(scanFilters: List<ScanFilter>, scanSettings: ScanSettings) {
-        if (!isScanning) {
             leScanCallback = object : ScanCallback() {
                 @SuppressLint("SuspiciousIndentation")
                 override fun onScanResult(callbackType: Int, result: ScanResult) {
                     super.onScanResult(callbackType, result)
                     scanResults.add(result)
                     viewModel.updateScanResults(scanResults)
-                    if (result.device.address == result.rssi.toString()){
-                        _RSSSI = result.rssi
-                        viewModel.updateBleRssi(_RSSSI)
-                        Log.d("ClassnRSSI", "${result.rssi}")
-                    }
+                    _RSSSI = result.rssi
+                    val devAddress = result.device.address
+                    Log.d("RSSSSI", "${_RSSSI}")
+                    Log.d("devADDD", "${devAddress}")
+                    viewModel.updateBleRssi(devAddress, _RSSSI)
                     handleScanResult(result)
                 }
             }
-            try {
-                bluetoothAdapter.bluetoothLeScanner.startScan(scanFilters, scanSettings, leScanCallback)
-                isScanning = true
-                Log.d("BleScannerClass", "Scan started")
-            }
-           catch (e: Exception) {
-                Log.e("BleScannerClass", "Error starting scan: ${e.message}")
-           }
-        }
-        else {
-            Log.d("BleScannerClass", "Scan is already in progress")
-        }
+        bluetoothAdapter.bluetoothLeScanner.startScan(scanFilters, scanSettings, leScanCallback)
     }
 
     fun stopBleScanner() {
-//        if (isScanning) {
-//            bluetoothAdapter.bluetoothLeScanner.stopScan(leScanCallback)
-//            leScanCallback = null
-//            isScanning = false
-//        }
-        if (isScanning) {
-            try {
-                bluetoothAdapter.bluetoothLeScanner.stopScan(leScanCallback)
-                leScanCallback = null
-                isScanning = false
-                Log.d("BleScannerClass", "Scan stopped")
-            } catch (e: Exception) {
-                Log.e("BleScannerClass", "Error stopping scan: ${e.message}")
-            }
-        } else {
-            Log.d("BleScannerClass", "No scan in progress to stop")
-        }
+        bluetoothAdapter.bluetoothLeScanner.stopScan(leScanCallback)
     }
 
     private fun handleScanResult(result: ScanResult) {

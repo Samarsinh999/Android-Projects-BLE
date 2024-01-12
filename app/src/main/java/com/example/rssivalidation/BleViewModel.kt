@@ -20,6 +20,8 @@ class BleViewModel : ViewModel() {
     var _ridegridMacAddress = MutableLiveData<String>()
     var _ridegridRssi = MutableStateFlow(-0)
     var _Rssi = MutableStateFlow(-121)
+
+    private val _rssiMap = mutableMapOf<String, MutableStateFlow<Int>>()
     val ridegridRssi: StateFlow<Int>
         get() = _ridegridRssi
 
@@ -49,19 +51,37 @@ class BleViewModel : ViewModel() {
         }
     }
 
-    fun updateBleRssi(pwd: Int) {
-        viewModelScope.launch {
-            _Rssi.tryEmit(pwd)
-            Log.d("Viewmodel RSSI", "${pwd}")
-            delay(1000)
-        }
-    }
+//    fun updateBleRssi(pwd: Int) {
+//        viewModelScope.launch {
+//            _Rssi.emit(pwd)
+//            Log.d("Viewmodel RSSI", "${pwd}")
+//            delay(3000)
+//        }
+//    }
 
     @OptIn(DelicateCoroutinesApi::class)
     fun clearAndSetData() {
           GlobalScope.launch {
               scanResults.value = emptyList()
           }
+    }
+
+    fun updateBleRssi(macAddress: String, rssi: Int) {
+        viewModelScope.launch {
+            if (!_rssiMap.containsKey(macAddress)) {
+                _rssiMap[macAddress] = MutableStateFlow(rssi)
+            } else {
+                _rssiMap[macAddress]?.value = rssi
+            }
+        }
+    }
+
+    fun observeRssi(macAddress: String): StateFlow<Int> {
+        if (!_rssiMap.containsKey(macAddress)) {
+            _rssiMap[macAddress] = MutableStateFlow(0)
+        }
+
+        return _rssiMap[macAddress]!!
     }
 }
 
